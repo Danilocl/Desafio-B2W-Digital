@@ -1,0 +1,32 @@
+{
+  "name": "star-wars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest",
+    "swagger-autogen": "node swagger.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.24.3",
+    "mongodb-memory-server": "^6.9.6",
+    "mongoose": "^5.12.1",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3",
+    "swagger-autogen": "^2.7.3",
+    "swagger-ui-express": "^4.1.6",
+    "swapi": "0.0.6"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

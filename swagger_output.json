@@ -1,0 +1,153 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Star Wars API",
+    "description": "Desafio B2W Digital"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/planets/insert": {
+      "post": {
+        "tags": [],
+        "description": "Endpoint para cadastrar um planeta.",
+        "parameters": [
+          {
+            "name": "Planeta",
+            "in": "body",
+            "description": "Informações do planeta.",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Planeta"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/planets": {
+      "get": {
+        "tags": [],
+        "description": "Endpoint para listar todos os planetas.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Planeta"
+            },
+            "description": "Segue abaixo a lista do ´planetas!."
+          }
+        }
+      }
+    },
+    "/planets/{id}": {
+      "get": {
+        "tags": [],
+        "description": "Endpoint para obter um planeta pelo id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Planeta"
+            },
+            "description": "Planeta Encontrado!."
+          }
+        }
+      }
+    },
+    "/planets/busca/{nome}": {
+      "get": {
+        "tags": [],
+        "description": "Endpoint para obter um planeta pelo nome.",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Planeta"
+            },
+            "description": "Planeta Encontrado!."
+          }
+        }
+      }
+    },
+    "/planets/{nome}": {
+      "delete": {
+        "tags": [],
+        "description": "Endpoint para deletar um planeta.",
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Planeta"
+            },
+            "description": "Planeta Deletado com sucesso!."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Planeta": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string",
+          "example": "Terra"
+        },
+        "clima": {
+          "type": "string",
+          "example": "Variado"
+        },
+        "terreno": {
+          "type": "string",
+          "example": "Variado"
+        }
+      }
+    }
+  }
+}
