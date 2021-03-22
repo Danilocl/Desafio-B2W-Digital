@@ -11,7 +11,7 @@ routes.get('/', (req, res) => {
     return res.status(200).json({
         message: 'Desafio Backend - Star Wars (Node.JS) - B2W Digital',
         listarPlanetas: 'http://localhost:3000/planets',
-        cadastrarPlanetas: 'http://localhost:3000/planets',
+        cadastrarPlanetas: 'http://localhost:3000/planets/insert',
         deletarPlanetas: 'http://localhost:3000/planets/:nome',
         buscarPorId: 'http://localhost:3000/planets/:id'
     });
