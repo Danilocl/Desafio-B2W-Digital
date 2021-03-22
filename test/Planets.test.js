@@ -151,7 +151,7 @@ describe('Desafio B2W - Teste API', () => {
     expect(response.body).toBeInstanceOf(Object);
   });
 
-  it('# Deverá remover um planeta válido', async () => {
+  it('# Remover um planeta válido', async () => {
     await request(app)
       .post('/planets/insert')
       .send(planetaComFilmes);

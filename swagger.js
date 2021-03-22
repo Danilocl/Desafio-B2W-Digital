@@ -16,9 +16,9 @@ const doc = {
     produces: ['application/json'],
     definitions: {
         Planeta: {
-            nome: 'Terra',
-            clima: 'Variado',
-            terreno: 'Variado',
+            nome: 'Alderaan',
+            clima: 'Temperado',
+            terreno: 'Campo, montanhoso',
         }
     }
 }
