@@ -12,10 +12,8 @@ As informações são obtidas pela API pública: https://swapi.dev/api
 - Mongodb
 - Mongoose
 
-#Build:
-- npm install
-
 # Executar:
+- npm install
 - npm start
 
 # Testes:
