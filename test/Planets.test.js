@@ -112,7 +112,7 @@ describe('Desafio B2W - Teste API', () => {
   });
 
 
-  it('# Consultando planeta pelo nome que não está existe no BD', async () => {
+  it('# Consultando planeta pelo nome que não existe no BD', async () => {
     const response = await request(app).get(
       `/planets/busca/${planetaInvalido.nome}`
     );
@@ -136,12 +136,26 @@ describe('Desafio B2W - Teste API', () => {
     });
   });
 
+  it('# Consultando planeta pelo ID', async () => {
+    await request(app)
+      .post('/planets/insert')
+      .send(planetaComFilmes);
+
+    const busca = await request(app).get(
+      `/planets/busca/${planetaComFilmes.nome}`
+    );
+    
+    const response = await request(app).get(`/planets/${busca.body._id}`);
+
+    expect(response.status).toBe(200);
+  });
+
   it('# Retornar a lista de todos os planetas cadastrados', async () => {
     await request(app)
       .post('/planets/insert')
       .send(planetaComFilmes);
 
-      await request(app)
+    await request(app)
       .post('/planets/insert')
       .send(planetaSemFilmes);
 
