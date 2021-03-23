@@ -59,7 +59,7 @@
             "schema": {
               "$ref": "#/definitions/Planeta"
             },
-            "description": "Segue abaixo a lista do ´planetas!."
+            "description": "Segue abaixo a lista do Planetas!."
           }
         }
       }
@@ -137,15 +137,15 @@
       "properties": {
         "nome": {
           "type": "string",
-          "example": "Terra"
+          "example": "Alderaan"
         },
         "clima": {
           "type": "string",
-          "example": "Variado"
+          "example": "Temperado"
         },
         "terreno": {
           "type": "string",
-          "example": "Variado"
+          "example": "Campo, montanhoso"
         }
       }
     }
